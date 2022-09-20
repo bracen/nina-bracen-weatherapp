@@ -29,7 +29,7 @@
               style="max-width: 50em"
               id="button"
             />
-            <button id="currentButton"> current location </button>
+           
             
           </form>
           <!--today weather-->
@@ -44,17 +44,18 @@
                 </ul>
               </div>
               <div class="col-sm">
-                <span style="font-size: 65px"> 🌤</span><br />
+                <span style="font-size: 65px" id="icon"> 🌤</span><br />
                <span class="temperature"
                   >15/24</span><br>
-                  <span class=units><a href="#" id="celsius">°C</a> |
-                  <a href="#" id="fahrenheit">°F</a></span
+                  <span class=units><a href="#" id="celsius-link">°C</a> |
+                  <a href="#" id="fahrenheit-link">°F</a></span
                 >
               </div>
               <div class="col-sm pt-2
               "> 
                 <span class="when">Currently</span><br />
                 <span calss=temperature id="temperature"> 22 ℃ </span><br />
+                <span class="when" id="description">clear sky</span><br/>
                 <span class="when" id="wind">wind:12km/h</span><br />
                 <span class="when" id="humidity">humidity:3%</span>
               </div>
