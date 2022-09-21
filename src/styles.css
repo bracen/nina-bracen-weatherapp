@@ -41,9 +41,14 @@ ul {
   line-height: 45px;
   font-weight: bold;
 }
-#unit {
+a {
+  color: rgb(123, 123, 123);
+  text-decoration: none;
+}
+a.active {
   color: white;
 }
+
 #description {
   font-size: 23px;
   color: white;
