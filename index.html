@@ -11,7 +11,7 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="src/styles.css" /> 
+    <link rel="stylesheet" href="src/styles.css" />
     <title>Nina Weather App</title>
   </head>
   <body>
@@ -19,7 +19,8 @@
       <div class="card">
         <div class="card-body">
           <form class="search text-center" id="search-form">
-            <input id="search-input"
+            <input
+              id="search-input"
               type="text"
               placeholder="🔎 serach for city"
               style="width: 30%"
@@ -30,48 +31,51 @@
               style="max-width: 50em"
               id="button"
             />
-           
           </form>
           <!--today weather-->
           <div class="container w-90 small p-4 mt-3 text-center border">
             <div class="row city">
               <div class="col-sm pt-3 text-center">
-                <span id="city">New York</span
-                ><br />
+                <span id="city">New York</span><br />
                 <ul>
+                  <li><span id="description"></span></li>        
                   <li id="date"></li>
                   <li id="time"></li>
-                  <li> L: <span id="dayTempMin"></span> | H: <span id="dayTempMax"></span></li>
-                  <li id="units"><a href="#" id="celsius-link">°C</a> |
-                  <a href="#" id="fahrenheit-link">°F</a></li>
+                  
                 </ul>
               </div>
               <div class="col-sm">
-                <span class="weahter-icon" ><img src="" id="icon"/></span><br />
+                <span class="weahter-icon"><img src="" id="icon" /></span><br />
                 <ul>
-                  <li id="description"></li>
+                <li> L: <span id="dayTempMin"></span> | H:
+                    <span id="dayTempMax"></span> </li>
                 </ul>
+                
               
               </div>
-              <div class="col-sm pt-2
-              "> 
-                <span class="when">Currently</span><br />
-                <span calss=temperature id="temperature"> 22 ℃ </span><br />
-                <ul>
-                <li>Wind:<span id="wind"></span>km/h</li>
-                <li>Humidity:<span id="humidity"></span>%</li>
-                </ul>
-              </div>
+              <div class="col-sm pt-2">
+                <span class="when">Currently</span><br />  
+                <span id="temperature"></span><br/>
+                <span id="units"
+                  ><a href="#" id="celsius-link">°C</a> |
+                  <a href="#" id="fahrenheit-link">°F</a>
+                  </span>
+              
+              <ul>
+                <li>Wind: <span id="wind"></span> km/h</li>
+                <li>Humidity: <span id="humidity"></span> %</li>
+              </ul>
             </div>
           </div>
-          <!-- 5 dates-->
-          <div class="row text-center mt-4 mx-4">
-            <div class="col">Fri</div>
-            <div class="col">Sat</div>
-            <div class="col">Sun</div>
-            <div class="col">Mon</div>
-            <div class="col">Tue</div>
-        <div class="pb-1 mb-1 border-bottom"></div>
+        </div>
+        <!-- 5 dates-->
+        <div class="row text-center mt-4 mx-4">
+          <div class="col">Fri</div>
+          <div class="col">Sat</div>
+          <div class="col">Sun</div>
+          <div class="col">Mon</div>
+          <div class="col">Tue</div>
+          <div class="pb-1 mb-1 border-bottom"></div>
         </div>
         <!-- 5 weathers-->
         <div class="row text-center mx-4">
@@ -102,7 +106,10 @@
         <p class="info">more information ></p>
       </div>
     </div>
-    <a href="https://github.com/bracen/nina-bracen-weatherapp">open-source code</a> by Nina Bracen
-      <script src="src/index.js"></script>
+    <a href="https://github.com/bracen/nina-bracen-weatherapp"
+      >open-source code</a
+    >
+    by Nina Bracen
+    <script src="src/index.js"></script>
   </body>
 </html>

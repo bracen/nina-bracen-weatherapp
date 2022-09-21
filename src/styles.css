@@ -1,3 +1,14 @@
+p {
+  margin-bottom: 0;
+  margin-right: 25px;
+}
+ul {
+  list-style: none;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  padding-left: 0;
+}
 #search {
   text-align: center;
 }
@@ -8,16 +19,7 @@
   padding: 5px;
   border-radius: 5px;
 }
-#currentButton {
-  border: black solid 1px;
-  padding: 5px 10px;
-  text-align: center;
-  border-radius: 5px;
-  cursor: pointer;
-}
-#currentButton:hover {
-  background: #c5c5c5;
-}
+
 .container {
   margin-top: 20px;
   max-width: 800px;
@@ -28,31 +30,28 @@
   margin-top: 5px;
 }
 #city {
-  font-size: 35px;
+  font-size: 38px;
   color: white;
   font-weight: bold;
 }
-ul {
-  list-style: none;
-  color: white;
-  font-size: 16px;
-  text-align: center;
-  padding-left: 0;
-}
-
 #temperature {
-  font-size: 35px;
+  font-size: 80 px;
   color: white;
   font-weight: bold;
   line-height: 45px;
 }
+#unit {
+  color: white;
+}
+#description {
+  font-size: 23px;
+  color: white;
+}
+
 .when {
   color: white;
 }
-.temperature {
-  color: white;
-  font-size: 16px;
-}
+
 .col {
   color: #a5a5a5;
 }
@@ -64,8 +63,4 @@ ul {
   color: #a5a5a5;
   text-align: right;
   padding-top: 25px;
-}
-p {
-  margin-bottom: 0;
-  margin-right: 25px;
 }
