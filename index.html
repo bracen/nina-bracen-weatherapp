@@ -27,9 +27,9 @@
             />
             <input
               type="submit"
-              value="search"
-              style="max-width: 50em"
+              value="search"       
               id="button"
+              style="width: 10%"
             />
           </form>
           <!--today weather-->
@@ -54,14 +54,13 @@
               
               </div>
               <div class="col-sm pt-2">
-                <span class="when">Currently</span><br />  
-                <span id="temperature"></span><br/>
-                <span id="units"
+                <ul>
+                <li class="when">Currently</li>
+                <li id="temperature"></li>
+                <li id="units"
                   ><a href="#" id="celsius-link">°C</a> |
                   <a href="#" id="fahrenheit-link">°F</a>
-                  </span>
-              
-              <ul>
+                </li>
                 <li>Wind: <span id="wind"></span> km/h</li>
                 <li>Humidity: <span id="humidity"></span> %</li>
               </ul>

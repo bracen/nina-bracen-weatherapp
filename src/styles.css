@@ -4,6 +4,7 @@ p {
 }
 ul {
   list-style: none;
+  line-height: 20px;
   color: white;
   font-size: 16px;
   text-align: center;
@@ -35,10 +36,10 @@ ul {
   font-weight: bold;
 }
 #temperature {
-  font-size: 80 px;
   color: white;
-  font-weight: bold;
+  font-size: 42px;
   line-height: 45px;
+  font-weight: bold;
 }
 #unit {
   color: white;
