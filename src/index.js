@@ -34,6 +34,14 @@ function dateFormat(timestamp) {
 
 //weather condition
 function showWeatherCondition(response) {
+  document.querySelector("#date").innerHTML = dateFormat(
+    response.data.dt * 1000
+  );
+  let minDayTemp = document.querySelector("#dayTempMin");
+  minDayTemp.innerHTML = Math.round(response.data.main.temp_min);
+  let maxDayTemp = document.querySelector("#dayTempMax");
+  maxDayTemp.innerHTML = Math.round(response.data.main.temp_max);
+
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = `${Math.round(
     response.data.main.temp
@@ -41,15 +49,13 @@ function showWeatherCondition(response) {
   document.querySelector(
     "#description"
   ).innerHTML = `${response.data.weather[0].description}`;
-  document.querySelector(
-    "#humidity"
-  ).innerHTML = `humidity : ${response.data.main.humidity} %`;
-  document.querySelector(
-    "#wind"
-  ).innerHTML = `windspeed : ${response.data.wind.speed} km/h`;
-  document.querySelector("#date").innerHTML = dateFormat(
-    response.data.dt * 1000
+  document.querySelector("#humidity").innerHTML = Math.round(
+    response.data.main.humidity
   );
+  document.querySelector("#wind").innerHTML = Math.round(
+    response.data.wind.speed
+  );
+
   let weatherIcon = document.querySelector("#icon");
   weatherIcon.setAttribute(
     "src",
