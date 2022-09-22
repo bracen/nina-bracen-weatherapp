@@ -10,6 +10,9 @@ ul {
   text-align: center;
   padding-left: 0;
 }
+li:first-letter{
+text-transform: capitalize;
+}
 #search {
   text-align: center;
 }
@@ -20,7 +23,10 @@ ul {
   padding: 5px;
   border-radius: 5px;
 }
-
+.weahter-icon img{
+  height:120px;
+  width:120px;
+}
 .container {
   margin-top: 20px;
   max-width: 800px;
@@ -48,12 +54,6 @@ a {
 a.active {
   color: white;
 }
-
-#description {
-  font-size: 23px;
-  color: white;
-}
-
 .when {
   color: white;
 }

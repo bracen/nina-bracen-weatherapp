@@ -33,9 +33,9 @@
             />
           </form>
           <!--today weather-->
-          <div class="container w-90 small p-4 mt-3 text-center border">
+          <div class="container w-90 small mt-3 text-center border">
             <div class="row city">
-              <div class="col-sm pt-3 text-center">
+              <div class="col-sm pt-4 text-center">
                 <span id="city">New York</span><br />
                 <ul>
                   <li><span id="description"></span></li>        
@@ -43,18 +43,20 @@
                   
                 </ul>
               </div>
-              <div class="col-sm">
+              <div class="col-sm pt-1 mb-4
+              ">
                 <span class="weahter-icon"><img src="" id="icon" /></span><br />
                 <ul>
-                <li> L: <span id="dayTempMin"></span>° </li>
-                <li> H: <span id="dayTempMax"></span>° </li>
+                <li> L: <span id="dayTempMin"></span>° | H: <span id="dayTempMax"></span>°</li>
+                
                 </ul>
                 
               
               </div>
-              <div class="col-sm pt-2">
+              <div class="col-sm pt-4 mt-2">
+             
                 <ul>
-                <li class="when">Currently</li>
+              
                 <li id="temperature"></li>
                 <li id="units"
                   ><a href="#" id="celsius-link" class="active">°C</a> |
