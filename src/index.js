@@ -1,8 +1,7 @@
 //Date(day,month,year)
-
 function dateFormat(timestamp) {
-  let currentTime = new Date(timestamp);
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+  let dateCity = new Date(timestamp);
+  let days = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
   let months = [
     "Jan",
     "Feb",
@@ -17,36 +16,41 @@ function dateFormat(timestamp) {
     "Nov",
     "Dec",
   ];
-  let day = days[currentTime.getDay()];
-  let date = currentTime.getDate();
-  let month = months[currentTime.getMonth()];
-  let year = currentTime.getFullYear();
-  let hours = currentTime.getHours();
+  let day = days[dateCity.getDay()];
+  let date = dateCity.getDate();
+  let month = months[dateCity.getMonth()];
+  let year = dateCity.getFullYear();
+  let hours = dateCity.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
   }
-  let minutes = currentTime.getMinutes();
+  let minutes = dateCity.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  return `${hours}:${minutes} ${day} ${date} ${month} ${year}`;
+  let ampm = hours >= 12 ? 'pm' : 'am';
+  hours = hours % 12;
+  hours = hours ? hours : 12;
+
+  return `${hours}:${minutes} ${ampm} ${day} ${date} ${month}`;
 }
 
 //weather condition
 function showWeatherCondition(response) {
-  document.querySelector("#date").innerHTML = dateFormat(
-    response.data.dt * 1000
-  );
+  let cityElement = document.querySelector("#city");
+  let temperatureElement = document.querySelector("#temperature");
+  let dateElement = document.querySelector("#date");
   let minDayTemp = document.querySelector("#dayTempMin");
   let maxDayTemp = document.querySelector("#dayTempMax");
+  
+  dateElement.innerHTML = dateFormat(response.data.dt*1000);
   maxDayTemp.innerHTML = Math.round(response.data.main.temp_max);
   minDayTemp.innerHTML = Math.round(response.data.main.temp_min);
-  document.querySelector("#city").innerHTML = response.data.name;
-
-  let temperatureElement = document.querySelector("#temperature");
+  cityElement.innerHTML = response.data.name;
+  
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
-
   celsiusTemperature = response.data.main.temp;
+  
   document.querySelector(
     "#description"
   ).innerHTML = `${response.data.weather[0].description}`;
