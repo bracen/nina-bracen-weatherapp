@@ -35,17 +35,17 @@
           <!--today weather-->
           <div class="container w-90 small p-4 mt-3 text-center border">
             <div class="row city">
-              <div class="col-sm pt-4 text-center">
+              <div class="col-sm pt-4 text-center" id="left-box">
                 <span id="city">New York</span><br />
                 <ul>
                   <li><span id="description"></span></li>        
                   <li id="date"></li>   
                 </ul>
               </div>
-              <div class="col-sm">
+              <div class="col-sm" id="center-box">
                 <span class="weahter-icon"><img src="" id="icon" /></span><br />
                 <ul>
-                <li> L: <span id="dayTempMin"></span>°| H: <span id="dayTempMax"></span>° </li>
+                <li> L: <span id="dayTempMin"></span>° | H: <span id="dayTempMax"></span>° </li>
                 </ul>
    
               </div>
@@ -97,7 +97,6 @@
           <div class="col">15º/24º</div>
           <div class="col">16º/29º</div>
         </div>
-        <p class="info">more information ></p>
       </div>
     </div>
     <a href="https://github.com/bracen/nina-bracen-weatherapp" id="code-link"

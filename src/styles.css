@@ -36,6 +36,14 @@ li:first-letter {
   text-transform: capitalize;
 }
 
+#left-box{
+  padding-right:0px;
+  padding-left:35px;
+}
+#center-box{
+  padding-left:30px;
+}
+
 #city {
   font-size: 38px;
   color: white;
