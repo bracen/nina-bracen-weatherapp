@@ -10,27 +10,62 @@ ul {
   text-align: center;
   padding-left: 0;
 }
-li:first-letter{
-text-transform: capitalize;
-}
 #search {
   text-align: center;
 }
-ul {
+
+button {
+  background: #666666;
+  border: none;
+  color: white;
   padding: 5px;
   border-radius: 5px;
 }
 
-.weahter-icon img{
-  height:120px;
-  width:120px;
-}
 .container {
   margin-top: 20px;
   max-width: 800px;
+}
+
+.container.small {
+  background-color: #999999;
+  width: 92%;
+  margin-top: 5px;
+}
+li:first-letter {
+  text-transform: capitalize;
+}
+
+#city {
+  font-size: 38px;
+  color: white;
+  font-weight: bold;
+}
+#temperature {
+  color: white;
+  font-size: 42px;
+  line-height: 45px;
+  font-weight: bold;
+}
+.weahter-icon img {
+  height: 120px;
+  width: 120px;
+}
+a {
+  color: rgb(123, 123, 123);
+  text-decoration: none;
+}
+a:hover {
+  color: white;
+  cursor: pointer;
+}
 
 a.active {
   color: white;
+}
+
+#code-link {
+  color: rgb(238, 119, 0);
 }
 
 #description {
