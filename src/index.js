@@ -32,7 +32,7 @@ function dateFormat(timestamp) {
   hours = hours % 12;
   hours = hours ? hours : 12;
 
-  return `${hours}:${minutes} ${ampm} ${day} ${date} ${month}`;
+  return `${hours}:${minutes} ${ampm} ${day}<br/> ${date} ${month} ${year}`;
 }
 
 //weather condition
