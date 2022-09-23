@@ -16,13 +16,11 @@ text-transform: capitalize;
 #search {
   text-align: center;
 }
-#button {
-  background: #666666;
-  border: none;
-  color: white;
+ul {
   padding: 5px;
   border-radius: 5px;
 }
+
 .weahter-icon img{
   height:120px;
   width:120px;
@@ -30,30 +28,16 @@ text-transform: capitalize;
 .container {
   margin-top: 20px;
   max-width: 800px;
-}
-.container.small {
-  background-color: #999999;
-  width: 92%;
-  margin-top: 5px;
-}
-#city {
-  font-size: 38px;
-  color: white;
-  font-weight: bold;
-}
-#temperature {
-  color: white;
-  font-size: 42px;
-  line-height: 45px;
-  font-weight: bold;
-}
-a {
-  color: rgb(123, 123, 123);
-  text-decoration: none;
-}
+
 a.active {
   color: white;
 }
+
+#description {
+  font-size: 23px;
+  color: white;
+}
+
 .when {
   color: white;
 }
