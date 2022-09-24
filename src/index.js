@@ -70,7 +70,7 @@ function showWeatherCondition(response) {
 }
 // search functions
 function findCity(city) {
-  let key = "5f472b7acba333cd8a035ea85a0d4d4c";
+  let key = "d0eb1d8786e68194a908a131778d27da";
   let units = "metric";
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=${units}`;
   axios.get(url).then(showWeatherCondition);
