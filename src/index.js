@@ -125,6 +125,27 @@ function displayMaxCelsiusTemperature(event) {
   highTemperatureElement.innerHTML = Math.round(maxDayCelsius);
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col">
+            <div class="forecast-date">${day}</div>
+            <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="" width="42"/>
+            <div class="forecast-temperature">
+              <span class="forecast-temperature-max">22°</span>
+              <span class="forecast-temperature-min">18°</span>
+            </div>
+         </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+  console.log(forecastHTML);
+}
+
 //let celsiusTemperature = null;
 
 let typeCity = document.querySelector("#search-form");
@@ -141,3 +162,4 @@ celsiusLink.addEventListener("click", displayLowCelsiusTemperature);
 celsiusLink.addEventListener("click", displayMaxCelsiusTemperature);
 
 findCity("New York");
+displayForecast();
