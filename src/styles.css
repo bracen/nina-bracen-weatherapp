@@ -28,7 +28,7 @@ button {
 }
 
 .container.small {
-  background-color: #b0afaf;
+  background-color: #a99b9b;
   width: 92%;
   margin-top: 5px;
   border-radius: 5px;
@@ -73,7 +73,7 @@ a.active {
 }
 
 #code-link {
-  color: rgb(238, 119, 0);
+  color: rgb(238, 91, 0);
 }
 
 #description {
