@@ -182,4 +182,4 @@ celsiusLink.addEventListener("click", displayCelsiusTemperature);
 celsiusLink.addEventListener("click", displayLowCelsiusTemperature);
 celsiusLink.addEventListener("click", displayMaxCelsiusTemperature);
 
-findCity("New York");
+findCity("Wellington");
