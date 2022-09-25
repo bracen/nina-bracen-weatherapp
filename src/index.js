@@ -67,6 +67,7 @@ function showWeatherCondition(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  getForecast(response.data.coord);
 }
 // search functions
 function findCity(city) {
@@ -124,23 +125,43 @@ function displayMaxCelsiusTemperature(event) {
   let highTemperatureElement = document.querySelector("#dayTempMax");
   highTemperatureElement.innerHTML = Math.round(maxDayCelsius);
 }
+//5 days forecast
 
-function displayForecast() {
+function formatDay(timestamp){
+  let date = new Date(timestamp*1000)
+  let day=date.getDay();
+  let days=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+  return days[day]
+}
+function getForecast(coordinates){
+  let key = "8ca7dd4e61360b90fb66918853670e48";
+  let url=`https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${key}&units=metric`;
+  axios.get(url).then(displayForecast);
+}
+
+function displayForecast(response) {
+  let forecast=response.data.daily;
   let forecastElement = document.querySelector("#forecast");
-  let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
   let forecastHTML = `<div class="row">`;
-  days.forEach(function (day) {
+ forecast.forEach(function (forecastDay,index) {
+  if(index<5){
     forecastHTML =
       forecastHTML +
       `<div class="col">
-            <div class="forecast-date">${day}</div>
-            <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="" width="42"/>
+            <div class="forecast-date">${formatDay(forecastDay.dt)}</div>
+            <img src="http://openweathermap.org/img/wn/${
+              forecastDay.weather[0].icon
+            }@2x.png" alt="" width="42"/>
             <div class="forecast-temperature">
-              <span class="forecast-temperature-max">22°</span>
-              <span class="forecast-temperature-min">18°</span>
+              <span class="forecast-temperature-min">${Math.round(
+                forecastDay.temp.min
+              )}°</span>
+              <span class="forecast-temperature-max">${Math.round(
+                forecastDay.temp.max
+              )}°</span>
             </div>
          </div>`;
-  });
+  }});
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
   console.log(forecastHTML);
@@ -162,4 +183,3 @@ celsiusLink.addEventListener("click", displayLowCelsiusTemperature);
 celsiusLink.addEventListener("click", displayMaxCelsiusTemperature);
 
 findCity("New York");
-displayForecast();
