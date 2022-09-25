@@ -28,9 +28,10 @@ button {
 }
 
 .container.small {
-  background-color: #999999;
+  background-color: #b0afaf;
   width: 92%;
   margin-top: 5px;
+  border-radius: 5px;
 }
 li:first-letter {
   text-transform: capitalize;
@@ -95,4 +96,10 @@ a.active {
   color: #a5a5a5;
   text-align: right;
   padding-top: 25px;
+}
+.forecast-temperature{
+  margin-bottom:10px;
+}
+.forecast-date{
+  margin-top: 10px;
 }
