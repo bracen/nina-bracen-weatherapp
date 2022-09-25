@@ -36,12 +36,12 @@ button {
 li:first-letter {
   text-transform: capitalize;
 }
-#left-box{
-  padding-right:0px;
-  padding-left:35px;
+#left-box {
+  padding-right: 0px;
+  padding-left: 35px;
 }
-#center-box{
-  padding-left:30px;
+#center-box {
+  padding-left: 30px;
 }
 
 #city {
@@ -97,9 +97,9 @@ a.active {
   text-align: right;
   padding-top: 25px;
 }
-.forecast-temperature{
-  margin-bottom:10px;
+.forecast-temperature {
+  margin-bottom: 10px;
 }
-.forecast-date{
+.forecast-date {
   margin-top: 10px;
 }
