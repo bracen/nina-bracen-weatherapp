@@ -81,35 +81,11 @@ function search(event) {
   let city = document.querySelector("#search-input");
   findCity(city.value);
 }
-//Fahrenheit Temp function
-function displayFahrenheitTemperature(event) {
-  event.preventDefault();
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let temperatureElement = document.querySelector("#temperature");
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
 
-function displayLowFahrenheitTemperature(event) {
-  event.preventDefault();
-  let lowTemperatureElement = document.querySelector("#dayTempMin");
-  let minFahrenheitTemperature = (minDayCelsius * 9) / 5 + 32;
-  lowTemperatureElement.innerHTML = Math.round(minFahrenheitTemperature);
-}
-
-function displayMaxFahrenheitTemperature(event) {
-  event.preventDefault();
-  let highTemperatureElement = document.querySelector("#dayTempMax");
-  let maxFahrenheitTemperature = (maxDayCelsius * 9) / 5 + 32;
-  highTemperatureElement.innerHTML = Math.round(maxFahrenheitTemperature);
-}
 
 //Celsius Temp elememts
 function displayCelsiusTemperature(event) {
   event.preventDefault();
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
@@ -167,19 +143,12 @@ function displayForecast(response) {
   console.log(forecastHTML);
 }
 
-//let celsiusTemperature = null;
+
 
 let typeCity = document.querySelector("#search-form");
 typeCity.addEventListener("submit", search);
 
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
-fahrenheitLink.addEventListener("click", displayLowFahrenheitTemperature);
-fahrenheitLink.addEventListener("click", displayMaxFahrenheitTemperature);
 
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", displayCelsiusTemperature);
-celsiusLink.addEventListener("click", displayLowCelsiusTemperature);
-celsiusLink.addEventListener("click", displayMaxCelsiusTemperature);
+
 
 findCity("Wellington");

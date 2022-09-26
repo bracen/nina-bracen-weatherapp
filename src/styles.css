@@ -51,25 +51,18 @@ li:first-letter {
 }
 #temperature {
   color: white;
-  font-size: 42px;
-  line-height: 45px;
+  font-size: 48px;
+  line-height:63px;
   font-weight: bold;
+}
+#celsius{
+  position:relative;
+  top: -20px;
+
 }
 .weahter-icon img {
   height: 120px;
   width: 120px;
-}
-a {
-  color: rgb(123, 123, 123);
-  text-decoration: none;
-}
-a:hover {
-  color: white;
-  cursor: pointer;
-}
-
-a.active {
-  color: white;
 }
 
 #code-link {
